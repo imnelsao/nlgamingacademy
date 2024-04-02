@@ -132,11 +132,11 @@ section .campeoes h3 {
 
 /* Footer */
 footer {
-	background-color: #f5f5f5; /* Light gray background */
+	background-color: #f5f5f5;
 	color: #333;
 	padding: 20px;
 	text-align: center;
-	height: 80px; /* Set height equal to the header (assuming it's 80px) */
+	height: 80px;
 }
 
 footer ul {
