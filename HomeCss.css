@@ -126,7 +126,7 @@ header nav ul li:hover {
 
 /* Seção principal */
 main {
-	padding: 120px 20px 20px; /* Ajuste para não ficar escondido pelo header */
+	padding: 120px 20px 20px;
 }
 
 /* Seção de campeões */
@@ -145,7 +145,7 @@ section.champions .champion {
 
 section.champions .champion img {
 	width: 100%;
-	max-width: 200px; /* Limita o tamanho das imagens */
+	max-width: 200px;
 	height: auto;
 }
 
