@@ -15,20 +15,40 @@ body {
 
 /* Header */
 header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 100;
-	background-color: #fff;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	font-size: 20px;
+	font-weight: 600;
+}
+
+header-logo {
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+}
+
+header-right {
+	flex: 1;
 }
 
 header img {
-	display: block;
-	margin: 0 auto;
 	max-width: 200px;
 	animation: logo-zoom 2s infinite alternate ease-in-out;
+}
+
+/* Responsividade do banner */
+.banner img {
+	width: 100%;
+	height: auto;
 }
 
 /* Animação para o logo */
@@ -42,12 +62,10 @@ header img {
 }
 
 header nav {
+	flex: 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 20px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
 header nav ul {
@@ -85,10 +103,13 @@ header nav ul li:hover {
 	background-color: #fff;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 200;
 }
 
 .dropdown:hover ul {
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 
 .dropdown ul li {
@@ -105,29 +126,32 @@ header nav ul li:hover {
 
 /* Seção principal */
 main {
-	padding: 80px 20px;
+	padding: 120px 20px 20px; /* Ajuste para não ficar escondido pelo header */
 }
 
 /* Seção de campeões */
-section h1 {
+section.champions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section.champions .champion {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin-bottom: 20px;
 }
 
-section .campeoes {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
-}
-
-section .campeoes img {
+section.champions .champion img {
 	width: 100%;
-	height: 200px;
-	object-fit: cover;
+	max-width: 200px; /* Limita o tamanho das imagens */
+	height: auto;
 }
 
-section .campeoes h3 {
-	margin-top: 10px;
-	margin-bottom: 5px;
+section.champions .champion h2,
+section.champions .champion p {
+	text-align: center;
 }
 
 /* Footer */
@@ -136,15 +160,15 @@ footer {
 	color: #333;
 	padding: 20px;
 	text-align: center;
-	height: 80px;
 }
 
 footer ul {
+	display: flex;
+	justify-content: center;
 	list-style: none;
 	padding: 0;
 }
 
 footer ul li {
-	display: inline-block;
 	margin: 0 10px;
 }
