@@ -131,13 +131,13 @@ main {
 
 /* Seção de campeões */
 section.champions {
-	display: flex;
+	display: inline-block;
 	flex-direction: column;
 	align-items: center;
 }
 
 section.champions .champion {
-	display: flex;
+	display: inline-block;
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 20px;
@@ -152,6 +152,23 @@ section.champions .champion img {
 section.champions .champion h2,
 section.champions .champion p {
 	text-align: center;
+}
+
+.imgs {
+	width: 100%;
+	height: auto;
+}
+
+.containerChampions {
+justify-content:center;
+display: inline-block;
+flex-direction: column;
+align-items: center;
+padding: 0%;
+width: 199.4px;
+height: 456px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 6px;
 }
 
 /* Footer */
