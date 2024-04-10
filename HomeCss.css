@@ -130,6 +130,34 @@ header nav ul li a:hover {
 	justify-content: space-between;
 }
 
+/* Responsividade */
+@media (max-width: 1024px) {
+	/* Ajusta o container pai para ter duas colunas na visualização até 1024px */
+	.container {
+		display: grid;
+		grid-template-columns: repeat(
+			2,
+			1fr
+		); /* Cria duas colunas de tamanho igual */
+		justify-items: center; /* Centraliza os itens horizontalmente */
+		gap: 20px; /* Adiciona um espaço entre os itens */
+	}
+
+	/* Para os itens filhos, neste caso, os .containerChampions, ajustamos para que ocupem a coluna corretamente */
+	.containerChampions {
+		grid-column: span 1; /* Cada box agora ocupa apenas uma das duas colunas, ajustando para 2 boxes por linha */
+		width: 100%; /* Ocupa a largura total da coluna designada */
+		/* Usar !important apenas se necessário para sobrescrever estilos conflitantes */
+	}
+}
+
+@media (max-width: 768px) {
+	/* Para dispositivos móveis, cada box se ajusta para ocupar a largura total */
+	.containerChampions {
+		grid-column: span 10; /* Garante que cada box ocupe a largura total em dispositivos menores */
+	}
+}
+
 .containerChampions img {
 	max-width: 100%;
 	margin-bottom: 15px;
