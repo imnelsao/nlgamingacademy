@@ -11,8 +11,6 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	color: #333;
-	padding-top: 60px; /* Compensa a altura do header fixo */
-	overflow-x: hidden; /* Evita rolagem horizontal indesejada */
 }
 
 /* Header */
@@ -26,15 +24,34 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0; /* Estende o header por toda a largura da viewport */
-	z-index: 1000; /* Garante que o header fique acima de outros elementos */
+	width: 100%;
+	z-index: 100;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+header-logo {
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+}
+
+header-right {
+	flex: 1;
 }
 
 header img {
-	max-width: 200px; /* Limita o tamanho do logo */
-	animation: logo-zoom 2s infinite alternate ease-in-out; /* Animação para o logo */
+	max-width: 200px;
+	animation: logo-zoom 2s infinite alternate ease-in-out;
 }
 
+/* Responsividade do banner */
+.banner img {
+	width: 100%;
+	height: auto;
+}
+
+/* Animação para o logo */
 @keyframes logo-zoom {
 	from {
 		transform: scale(1);
@@ -44,21 +61,32 @@ header img {
 	}
 }
 
-/* Navegação */
+header nav {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 header nav ul {
 	display: flex;
 	list-style: none;
-	gap: 20px; /* Espaçamento entre os itens do menu */
+}
+
+header nav ul li {
+	margin: 0 10px;
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 0.2s ease-in-out;
 }
 
 header nav ul li a {
 	text-decoration: none;
 	color: #333;
-	transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-	color: #007bff; /* Cor ao passar o mouse */
+header nav ul li:hover {
+	background-color: #f5f5f5;
 }
 
 /* Dropdown */
