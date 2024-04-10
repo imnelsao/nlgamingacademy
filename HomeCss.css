@@ -143,11 +143,9 @@ header nav ul li a:hover {
 		gap: 20px; /* Adiciona um espaço entre os itens */
 	}
 
-	/* Para os itens filhos, neste caso, os .containerChampions, ajustamos para que ocupem a coluna corretamente */
 	.containerChampions {
-		grid-column: span 1; /* Cada box agora ocupa apenas uma das duas colunas, ajustando para 2 boxes por linha */
+		grid-column: span 1; /* Cada box ocupa apenas uma das duas colunas, ajustando para 2 boxes por linha */
 		width: 100%; /* Ocupa a largura total da coluna designada */
-		/* Usar !important apenas se necessário para sobrescrever estilos conflitantes */
 	}
 }
 
