@@ -10,16 +10,13 @@
 		transform: scale(1.1);
 	}
 }
+
 .navbar-brand img {
 	max-width: 100%;
 }
 
 body {
 	padding-top: 80px;
-}
-
-.navbar-brand img {
-	max-width: 100%;
 }
 
 .card img {
@@ -34,22 +31,25 @@ body {
 
 .card-body {
 	position: relative;
-	padding-bottom: 60px;
+	padding-bottom: 100px;
+	min-height: 250px;
 }
 
 .card-body .btn {
 	position: absolute;
-	bottom: 10px;
+	bottom: 20px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 90%;
+	width: 80%;
 	background-color: #000 !important;
 	color: #fff !important;
 	border: none;
 }
 
-.card-body .btn:hover {
-	background-color: #333 !important;
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .footer {
@@ -88,10 +88,6 @@ body {
 	}
 }
 
-.card {
-	height: 100%;
-	position: relative;
-}
 .hero-banner {
 	position: relative;
 	text-align: center;
@@ -130,6 +126,7 @@ body {
 		font-size: 2rem;
 	}
 }
+
 .banner-text {
 	font-size: calc(1.5vw + 1.5rem);
 }
