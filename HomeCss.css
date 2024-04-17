@@ -16,7 +16,7 @@
 }
 
 body {
-	padding-top: 80px;
+	padding-top: 120px;
 }
 
 .card img {
@@ -32,7 +32,7 @@ body {
 .card-body {
 	position: relative;
 	padding-bottom: 100px;
-	min-height: 250px;
+	min-height: 300px;
 }
 
 .card-body .btn {
@@ -92,6 +92,7 @@ body {
 	position: relative;
 	text-align: center;
 	color: white;
+	margin-top: 20px;
 }
 
 .hero-banner img {
@@ -124,6 +125,9 @@ body {
 @media (max-width: 480px) {
 	.banner-text {
 		font-size: 2rem;
+	}
+	body {
+		padding-top: 100px;
 	}
 }
 
