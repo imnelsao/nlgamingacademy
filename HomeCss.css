@@ -14,11 +14,11 @@
 
 /* Ajustes para assegurar que o conteúdo não fique sob a navbar */
 body {
-	padding-top: 80px; /* Ajuste conforme a altura da sua navbar */
+	padding-top: 80px;
 }
 
 .navbar-brand img {
-	max-width: 100%; /* Assegura que o logo não ultrapasse o tamanho do contêiner da marca */
+	max-width: 100%;
 }
 
 .card img {
@@ -31,20 +31,19 @@ body {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Centralização e estilização do botão */
 .card-body .btn {
-	position: absolute; /* Posiciona o botão absolutamente dentro do card-body */
-	bottom: 10px; /* Margem do fundo do card */
-	left: 50%; /* Centraliza horizontalmente */
-	transform: translateX(-50%); /* Ajuste fino para centralização perfeita */
-	width: 90%; /* Ajusta a largura do botão */
-	background-color: #000 !important; /* Cor do botão */
-	color: #fff !important; /* Cor do texto no botão */
-	border: none; /* Remove qualquer borda padrão */
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	background-color: #000 !important;
+	color: #fff !important;
+	border: none;
 }
 
 .card-body .btn:hover {
-	background-color: #333 !important; /* Cor do botão ao passar o mouse */
+	background-color: #333 !important;
 }
 
 .footer {
@@ -62,38 +61,28 @@ body {
 	color: #555;
 }
 
-/* Ajuste do tamanho da fonte e do negrito nos itens do menu */
 .navbar-nav .nav-link,
 .navbar-nav .dropdown-toggle,
 .dropdown-item {
-	font-size: 1.4rem; /* Tamanho da fonte ajustado para 1.4rem */
+	font-size: 1.4rem;
 }
 
 .navbar-nav .dropdown-toggle {
-	font-weight: bold; /* Negrito para o dropdown "Campeões" */
+	font-weight: bold;
 }
 
-/* Removendo o espaço adicional entre a logo e os itens do menu */
 .container-fluid {
-	padding-left: 0; /* Remove o padding extra */
+	padding-left: 0;
 }
 
-/* Ajustando os boxes para que todos exibam na mesma linha em desktops */
 @media (min-width: 992px) {
-	/* Bootstrap breakpoint para desktops grandes */
-	.row.row-cols-lg-4 {
-		display: flex; /* Força o display flex */
-		flex-wrap: nowrap; /* Não permite quebra de linha */
-	}
-
-	.col {
-		flex: 0 0 20%; /* Define que cada coluna ocupa 20% da linha */
-		max-width: 20%; /* Define a largura máxima para 20% para evitar quebras */
+	.row-cols-lg-5 .col {
+		flex: 0 0 20%;
+		max-width: 20%;
 	}
 }
 
-/* Garantindo que todos os boxes do card tenham o mesmo tamanho */
 .card {
-	height: 100%; /* Garante que todos os cards tenham a mesma altura */
-	position: relative; /* Necessário para o posicionamento absoluto do botão */
+	height: 100%;
+	position: relative;
 }
