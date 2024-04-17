@@ -1,57 +1,8 @@
-/* Reset de estilos */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-/* Estilos gerais */
-body {
-	font-family: "Roboto", sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-	color: #333;
-}
-
-/* Header */
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-	background-color: #fff;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 100;
-	font-size: 20px;
-	font-weight: 600;
-}
-
-header-logo {
-	flex: 1;
-	display: flex;
-	justify-content: flex-start;
-}
-
-header-right {
-	flex: 1;
-}
-
-header img {
-	max-width: 200px;
+/* Estilos personalizados que podem ser necessários além do Bootstrap */
+.logo-zoom {
 	animation: logo-zoom 2s infinite alternate ease-in-out;
 }
 
-/* Responsividade do banner */
-.banner img {
-	width: 100%;
-	height: auto;
-}
-
-/* Animação para o logo */
 @keyframes logo-zoom {
 	from {
 		transform: scale(1);
@@ -61,173 +12,88 @@ header img {
 	}
 }
 
-header nav {
-	flex: 2;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/* Ajustes para assegurar que o conteúdo não fique sob a navbar */
+body {
+	padding-top: 80px; /* Ajuste conforme a altura da sua navbar */
 }
 
-header nav ul {
-	display: flex;
-	list-style: none;
+.navbar-brand img {
+	max-width: 100%; /* Assegura que o logo não ultrapasse o tamanho do contêiner da marca */
 }
 
-header nav ul li {
-	margin: 0 10px;
-	padding: 10px;
-	border-radius: 5px;
-	transition: background-color 0.2s ease-in-out;
-}
-
-header nav ul li a {
-	text-decoration: none;
-	color: #333;
-}
-
-header nav ul li:hover {
-	background-color: #f5f5f5;
-}
-
-/* Dropdown */
-.dropdown {
-	position: relative;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f9f9f9;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-}
-
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-
-/* Banner */
-.banner img {
+.card img {
 	width: 100%;
 	height: auto;
 }
 
-/* Boxes */
-.main {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 20px;
-	margin-top: 20px;
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-	display: grid;
-	grid-template-columns: repeat(10, 1fr);
-	column-gap: 20px;
-	row-gap: 20px;
-	justify-content: center;
-	padding: 0 2%;
-	margin-top: 20px;
+/* Centralização e estilização do botão */
+.card-body .btn {
+	position: absolute; /* Posiciona o botão absolutamente dentro do card-body */
+	bottom: 10px; /* Margem do fundo do card */
+	left: 50%; /* Centraliza horizontalmente */
+	transform: translateX(-50%); /* Ajuste fino para centralização perfeita */
+	width: 90%; /* Ajusta a largura do botão */
+	background-color: #000 !important; /* Cor do botão */
+	color: #fff !important; /* Cor do texto no botão */
+	border: none; /* Remove qualquer borda padrão */
 }
 
-.titulos {
-	justify-content: center;
-	text-align: center;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
-	font-size: 40px;
-	font-weight: 600;
+.card-body .btn:hover {
+	background-color: #333 !important; /* Cor do botão ao passar o mouse */
 }
 
-.containerChampions {
-	grid-column: span 2; /* Cada box ocupa 2 das 10 colunas */
-	padding: 20px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 6px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-	/* Ajusta o container pai para ter duas colunas na visualização até 1024px */
-	.container {
-		display: grid;
-		grid-template-columns: repeat(
-			2,
-			1fr
-		); /* Cria duas colunas de tamanho igual */
-		justify-items: center; /* Centraliza os itens horizontalmente */
-		gap: 20px; /* Adiciona um espaço entre os itens */
-	}
-
-	.containerChampions {
-		grid-column: span 1; /* Cada box ocupa apenas uma das duas colunas, ajustando para 2 boxes por linha */
-		width: 100%; /* Ocupa a largura total da coluna designada */
-	}
-}
-
-@media (max-width: 768px) {
-	/* Para dispositivos móveis, cada box se ajusta para ocupar a largura total */
-	.containerChampions {
-		grid-column: span 10; /* Garante que cada box ocupe a largura total em dispositivos menores */
-	}
-}
-
-.containerChampions img {
-	max-width: 100%;
-	margin-bottom: 15px;
-}
-
-.buttonChampions {
-	margin: 0 auto;
-	margin-top: 3rem;
-	width: 175px;
-	font-size: 16px;
-	font-weight: 600;
-	height: 48px;
-	background-color: #000;
-	color: #ffffff;
-	border-radius: 4px;
-	padding: 10px 15px;
-	cursor: pointer;
-	align-self: center;
-}
-
-.buttonChampions-link {
-	display: block;
-	text-align: center;
-}
-
-.about-lol {
-	margin-right: 1.2rem;
-}
-
-/* Rodapé */
-footer {
+.footer {
 	background-color: #f5f5f5;
+	padding: 20px 0;
+	color: #666;
+}
+
+.footer .nav-link {
 	color: #333;
-	padding: 20px;
-	text-align: center;
+	transition: color 0.3s;
 }
 
-footer ul {
-	display: flex;
-	justify-content: center;
-	list-style: none;
-	padding: 0;
+.footer .nav-link:hover {
+	color: #555;
 }
 
-footer ul li {
-	margin: 0 10px;
+/* Ajuste do tamanho da fonte e do negrito nos itens do menu */
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle,
+.dropdown-item {
+	font-size: 1.4rem; /* Tamanho da fonte ajustado para 1.4rem */
+}
+
+.navbar-nav .dropdown-toggle {
+	font-weight: bold; /* Negrito para o dropdown "Campeões" */
+}
+
+/* Removendo o espaço adicional entre a logo e os itens do menu */
+.container-fluid {
+	padding-left: 0; /* Remove o padding extra */
+}
+
+/* Ajustando os boxes para que todos exibam na mesma linha em desktops */
+@media (min-width: 992px) {
+	/* Bootstrap breakpoint para desktops grandes */
+	.row.row-cols-lg-4 {
+		display: flex; /* Força o display flex */
+		flex-wrap: nowrap; /* Não permite quebra de linha */
+	}
+
+	.col {
+		flex: 0 0 20%; /* Define que cada coluna ocupa 20% da linha */
+		max-width: 20%; /* Define a largura máxima para 20% para evitar quebras */
+	}
+}
+
+/* Garantindo que todos os boxes do card tenham o mesmo tamanho */
+.card {
+	height: 100%; /* Garante que todos os cards tenham a mesma altura */
+	position: relative; /* Necessário para o posicionamento absoluto do botão */
 }
