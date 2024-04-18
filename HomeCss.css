@@ -52,18 +52,21 @@ body {
 }
 
 .footer {
-	background-color: #f5f5f5;
+	background-color: #333;
 	padding: 20px 0;
-	color: #666;
+	color: black;
 }
 
-.footer .nav-link {
-	color: #333;
+.footer .nav-link,
+.footer .nav-link:hover,
+.footer .nav-link:focus {
+	color: black !important;
+	font-size: 1.2rem;
 	transition: color 0.3s;
 }
 
 .footer .nav-link:hover {
-	color: #555;
+	color: #555 !important;
 }
 
 .navbar-nav .nav-link,
