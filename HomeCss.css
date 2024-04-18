@@ -1,18 +1,17 @@
-.logo-zoom {
-	animation: logo-zoom 2s infinite alternate ease-in-out;
-}
-
-@keyframes logo-zoom {
-	from {
-		transform: scale(1);
-	}
-	to {
-		transform: scale(1.1);
-	}
-}
-
 .navbar-brand img {
 	max-width: 100%;
+	display: block;
+	animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
 }
 
 body {

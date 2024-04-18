@@ -14,12 +14,7 @@
 	<body>
 		<header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<div class="container-fluid">
-				<a
-					class="navbar-brand"
-					href="#"
-					class="logo-zoom"
-					style="max-width: 200px"
-				>
+				<a class="navbar-brand" href="#">
 					<img
 						src="imgs/logonlgaming.png"
 						alt="NL Gaming Academy"
@@ -210,3 +205,13 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
+<script>
+	window.onload = function () {
+		setTimeout(function () {
+			var logo = document.querySelector(".navbar-brand img");
+			if (logo) {
+				logo.style.animation = "none";
+			}
+		}, 5000);
+	};
+</script>
