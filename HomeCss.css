@@ -3,6 +3,13 @@
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
+@media (max-width: 768px) {
+	.navbar {
+		border-bottom: 1px solid #ccc !important;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+	}
+}
+
 .navbar-brand img {
 	max-width: 100%;
 	display: block;
