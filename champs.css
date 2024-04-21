@@ -58,9 +58,16 @@ body {
 	padding-top: 120px;
 }
 .imgs{
-    width: 4%;
-	height: 4%;
+    width: 60px;
+	height: 60px;
     padding: auto;
+}
+.content{
+	width: 90%;
+	height: 100%;
+	margin: auto;
+
+
 }
 
 
