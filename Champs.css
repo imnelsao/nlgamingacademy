@@ -58,12 +58,15 @@ body {
   padding-top: 120px;
 }
 .imgs {
+  align-items: baseline;
   max-width: 60 !important;
   max-height: 60px !important;
   width: 60px !important;
   height: 60px !important;
 }
-
+.d-flex{
+  align-items: center;
+}
 .custom-breadcrumb {
   margin-top: -5%;
 }
