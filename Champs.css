@@ -63,7 +63,9 @@ body {
   width: 60px !important;
   height: 60px !important;
 }
-
+.d-flex {
+  align-items: center;
+}
 .custom-breadcrumb {
   margin-top: -5%;
 }
