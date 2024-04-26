@@ -192,3 +192,13 @@
     </script>
   </body>
 </html>
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      var logo = document.querySelector(".navbar-brand img");
+      if (logo) {
+        logo.style.animation = "none";
+      }
+    }, 5000);
+  };
+</script>
